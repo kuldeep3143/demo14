@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('CI') {
             steps {
-                snDevOpsStep()
-                         
+                snDevOpsStep()                         
             }           
         }
         stage('UATDeploy') {
@@ -16,8 +15,7 @@ pipeline {
         }
         stage('UATTest') {
             steps {
-                snDevOpsStep()
-                              
+                snDevOpsStep()                              
             }
         }
         stage('PRODDeploy') {
