@@ -4,26 +4,26 @@ pipeline {
     stages {
         stage('CI') {
             steps {
-                snDevOpsStep()
+                snDevOpsStep(ignoreErrors:false)
                          
             }           
         }
         stage('UAT deploy') {
             steps {
-                snDevOpsStep()
+                snDevOpsStep(ignoreErrors:false)
                
                }
         }
         stage('UAT test') {
             steps {
-                snDevOpsStep()
+                snDevOpsStep(ignoreErrors:false)
                               
             }
         }
         stage('deploy') {
             steps {
-                snDevOpsStep()
-                snDevOpsChange()
+                snDevOpsStep(ignoreErrors:false)
+                snDevOpsChange(ignoreErrors:false)
                 }
         }
     }
