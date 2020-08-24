@@ -8,19 +8,19 @@ pipeline {
                          
             }           
         }
-        stage('UAT deploy') {
+        stage('UATDeploy') {
             steps {
                 snDevOpsStep(ignoreErrors:false)
                
                }
         }
-        stage('UAT test') {
+        stage('UATTest') {
             steps {
                 snDevOpsStep(ignoreErrors:false)
                               
             }
         }
-        stage('deploy') {
+        stage('PRODDeploy') {
             steps {
                 snDevOpsStep(ignoreErrors:false)
                 snDevOpsChange(ignoreErrors:false)
