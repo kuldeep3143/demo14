@@ -4,26 +4,26 @@ pipeline {
     stages {
         stage('CI') {
             steps {
-                snDevOpsStep(ignoreErrors:false)
+                snDevOpsStep()
                          
             }           
         }
         stage('UATDeploy') {
             steps {
-                snDevOpsStep(ignoreErrors:false)
-               
+                snDevOpsStep()
+               snDevOpsChange()
                }
         }
         stage('UATTest') {
             steps {
-                snDevOpsStep(ignoreErrors:false)
+                snDevOpsStep()
                               
             }
         }
         stage('PRODDeploy') {
             steps {
-                snDevOpsStep(ignoreErrors:false)
-                snDevOpsChange(ignoreErrors:false)
+                snDevOpsStep()
+                snDevOpsChange()
                 }
         }
     }
