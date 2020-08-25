@@ -1,24 +1,23 @@
 pipeline {
     agent any
-    
     stages {
-        stage('CI') {
+        stage('Build') {
             steps {
                 snDevOpsStep()                         
             }           
         }
-        stage('UATDeploy') {
+        stage('Publish to UAT') {
             steps {
                 snDevOpsStep()
-               snDevOpsChange()
+                snDevOpsChange()
                }
         }
-        stage('UATTest') {
+        stage('Jenkins Deploy UAT') {
             steps {
                 snDevOpsStep()                              
             }
         }
-        stage('PRODDeploy') {
+        stage('Publish to PROD') {
             steps {
                 snDevOpsStep()
                 snDevOpsChange()
