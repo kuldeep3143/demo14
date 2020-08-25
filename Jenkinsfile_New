@@ -6,18 +6,18 @@ pipeline {
                 snDevOpsStep()                         
             }           
         }
-        stage('Publish to UAT') {
+        stage('PublishtoUAT') {
             steps {
                 snDevOpsStep()
                 snDevOpsChange()
                }
         }
-        stage('Jenkins Deploy UAT') {
+        stage('JenkinsDeployUAT') {
             steps {
                 snDevOpsStep()                              
             }
         }
-        stage('Publish to PROD') {
+        stage('PublishtoPROD') {
             steps {
                 snDevOpsStep()
                 snDevOpsChange()
